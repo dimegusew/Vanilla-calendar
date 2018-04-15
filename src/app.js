@@ -1,3 +1,2 @@
-import './js/rainbows.js';
-import './js/unicorns.js';
+import './js/index.js';
 import './scss/base.scss'

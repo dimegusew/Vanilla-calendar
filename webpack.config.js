@@ -8,18 +8,17 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-          rules: [{
-              test: /\.scss$/,
-              use: [{
-                  loader: "style-loader"
-              }, {
-                  loader: "css-loader"
-              }, {
-                  loader: "sass-loader",
-                  options: {
-                      includePaths: ["absolute/path/a", "absolute/path/b"]
-                  }
-              }]
-          }]
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       }
-  };
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin('style.css')
+  ]
+};

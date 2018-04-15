@@ -1,18 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <link rel='stylesheet' href='dist/style.css'>
 </head>
-    <script type="text/javascript" src="dist/bundle.js"></script>
+<script type="text/javascript" src="dist/bundle.js"></script>
 
 <body>
-  <div class ="header">header</div>
-  <div class ="main-block">
-    <div class = "calendar">
-      <div class = "calendar-choose-pane"> </div>
-      <div id = "calendar-pole">
+  <div class="header">
+    <div class="container">
+      <div class="buttons-box">
+        <button>Добавить</button>
+        <button>Обновить</button>
       </div>
-     </div>
+      <div class="input-box">
+        <img src='./src/search.png'>
+        <input placeholder="Событие, дата или участник" />
+      </div>
+    </div>
+  </div>
+  <div class="main-block">
+    <div class="calendar">
+      <div class="calendar-choose-pane">
+        <button id="toPrevMonth"><div>◄ </div></button>
+        <p id="month-name"></p>
+        <button id="toNextMonth"><div>►</div></button>
+        <div class="today-logo">Сегодня</div>
+      </div>
+      <div id="calendar-pole">
+      </div>
+    </div>
   </div>
 </body>
